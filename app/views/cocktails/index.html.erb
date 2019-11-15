@@ -1,16 +1,40 @@
-<h1>All the cocktails</h1>
-<p> <%= link_to 'Add cocktail', new_cocktail_path %> </p>
-<hr>
-<div class="row">
-  <div class="col-8 cards">
-    <ul>
-      <% @cocktails.each do |c| %>
-        <div class="cocktail-card">
-        <li> <%= c.name %> | <%= link_to 'View cocktail', c %> | <%= link_to 'Delete cocktail', c, method: :delete %> </li>
-        </div>
-      <% end %>
-    </ul>
+
+<div class="container">
+
+  <div class='opening-banner'>
+    <img class="opening-banner-img" src="https://blog.williams-sonoma.com/wp-content/uploads/2015/11/ROTD_DEC_15_la-santa-old-fashion.jpg" alt="">
+  <div><h1>All <br> the <br>cocktails.</h1></div>
+  </div>
+
+
+    <p> <%= link_to 'Add cocktail', new_cocktail_path %> </p>
+    <hr>
+    <div class="row">
+      <div class="col-12 cards">
+        <% @cocktails.each do |c| %>
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path c.photo, height: 200, crop: :fill %>')">
+
+              <div class="cocktail-name">
+              <ul>
+                <li> <%= c.name %> </li>
+              </ul>
+              </div>
+
+              <div class="cocktail-actions">
+                <ul>
+                  <li><%= link_to 'View cocktail', c %> | <%= link_to 'Delete cocktail', c, method: :delete %></li>
+                </ul>
+              </div>
+
+          </div>
+
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
+
+
+
 
 

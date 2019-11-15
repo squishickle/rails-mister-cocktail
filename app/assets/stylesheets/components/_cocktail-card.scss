@@ -1,6 +1,15 @@
 .cocktail-card {
-  width: 200px;
+  grid-template-columns: 1fr;
+  margin: 10px 15px;
   height: 200px;
-  margin: 0px;
-  border: 1px solid black;
+  box-shadow: 3px 4px 10px #c7c7c7;
+  border-radius: 2px;
+
 }
+
+.cocktail-actions {
+}
+
+.cocktail-name {
+}
+
