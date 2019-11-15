@@ -1,5 +1,9 @@
-<h1>New Dose</h1>
+<h1>New dose for <%= @cocktail.name %> </h1>
 
 <div class="container">
   <%= render 'form' %>
 </div>
+
+<hr>
+<p> <%= link_to 'Home', cocktails_path %> </p>
+
